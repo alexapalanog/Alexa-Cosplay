@@ -39,10 +39,10 @@
         </div>
            <div class="social-network">
                <ul>
-                   <li><a href="https://www.facebook.com/alexa.medel.cute"><i class="fab fa-facebook-f"></i></a></li>
-                   <li><a href="https://www.tiktok.com/@_alexchz?lang=en"><i class="fab fa-tiktok"></i></a></li>
-                   <li><a href="www.linkedin.com/in/alexandra-antonette-palanog-a8521a248"><i class="fab fa-linkedin-in"></i></a></li>
-                   <li><a href="https://www.instagram.com/_alexchz/"><i class="fab fa-instagram"></i></a></li>
+                   <li><a href="https://www.facebook.com/alexa.medel.cute" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                   <li><a href="https://www.tiktok.com/@_alexchz?lang=en" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                   <li><a href="https://www.linkedin.com/in/alexandra-antonette-palanog-a8521a248" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                   <li><a href="https://www.instagram.com/_alexchz/" target="_blank"><i class="fab fa-instagram"></i></a></li>
                </ul>
            </div>
        </div>
@@ -180,9 +180,9 @@
                <span>!! Collab with me !!!</span>
            </div>
            <form id="contact" action="submit-form.php" method="POST">
-               <input type="text" name="name" placeholder="Your Name">
+               <input type="text" name="name" placeholder="Your Name" required>
                <input type="email" name="email" placeholder="Your Email">
-               <textarea name="message" placeholder="Your Message"></textarea>
+               <textarea name="message" placeholder="Your Message" required></textarea>
                <button type="submit">Send Message</button>
            </form>
        </section>
@@ -206,6 +206,8 @@
                 }, function(error) {
                     alert('Failed to send message. Error: ' + JSON.stringify(error));
                 });
+            
+        document.getElementById('contact').reset();
         });
 
         // Menu toggle script for small screens
